@@ -1,23 +1,23 @@
 # Игнорирование файлов и папок для front-end
 
 # Node.js
-/client/node_modules
-/api/node_modules
+/**/node_modules
 
 # Файлы сборки
 /client/build
 /api/dist
 
 # Игнорирование файлов конфигурации
-client/.env
-api/.env
+/**/.env
 
 # Игнорирование зависимостей пакетного менеджера
-client/yarn.lock
-api/yarn.lock
+/**/yarn.lock
 
 # Игнорирование IDE-специфичных файлов
 .idea
 .vscode
 *.sublime-project
 *.sublime-workspace
+
+/**/.eslintrc.js
+/**/.prettierrc
