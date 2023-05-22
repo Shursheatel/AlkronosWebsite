@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int     @id @default(autoincrement())
+
+  email       String  @unique
+  password    String
+
+  firstName   String?
+  secondName  String?
+  avatarPath  String  @default("/uploads/default-avatar.png") @map("avatar_path") 
+}
+
+model SpecialOffers {
+  id          Int     @id @default(autoincrement())
+
+  title       String  @unique
+  type        String
+  body        String
+  imgURL      String
+
+  createdAt   String
+  expiresIn   String
+}
+
+model BankOffices {
+  id          Int     @id @default(autoincrement())
+
+  latitude    Float
+  longitude   Float
+
+  officeHours String?
+  address     String?
+}
+
+
+
+
+
+
+

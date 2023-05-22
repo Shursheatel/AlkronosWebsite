@@ -1,0 +1,41 @@
+.toggle-theme-btn {
+	order: 9;
+
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+
+	width: 54px;
+	height: 26px;
+	padding: 5px;
+
+	border-radius: 50px;
+	background-color: var(--toggle-theme-slider-bg);
+}
+
+.toggle-theme-btn::before {
+	content: '';
+
+	position: absolute;
+	top: 1px;
+	left: 1px;
+
+	display: block;
+	width: 24px;
+	height: 24px;
+
+	border-radius: 50%;
+	background-color: var(--toggle-theme-slider);
+
+	transition: left 0.1s ease-in;
+}
+
+.toggle-theme-btn--active::before {
+	left: 29px;
+}
+
+.toggle-theme-btn__icon {
+	position: relative;
+	z-index: 9;
+	width: 16px;
+}
